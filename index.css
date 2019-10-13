@@ -1,0 +1,303 @@
+
+/* 初始化body样式 */
+ body{
+  
+ max-width: 540px;
+ min-width: 320px;
+ margin: 0 auto;
+font:normal 14px/1.5 Tahoma, "Lucida Grande",Verdana, 
+"Microsoft Yahei", STXihei,hei;
+background: #f2f2f2;
+overflow-x: hidden;
+-webkit-tap-highlight-color: transparent;
+} 
+
+div{
+  box-sizing: border-box;
+
+}
+/*
+ 一.搜索框的制作
+1.因为搜索框的盒子，滑动的时候是需要定位
+  不能让它滑着走，所以固定定位的盒子必须要宽度
+2.注意的是：固定定位于与屏幕为主，跟父级是没有关系的
+3.所以要在把父级的样式大小在子级在写一遍
+
+*/
+.serchCnt{
+
+display: flex;
+width: 100%;
+position: fixed;
+top:0;
+left: 50%;
+transform: translateX(-50%);
+max-width: 540px;
+min-width: 320px;
+height: 44px;
+background: #F6F6F6;
+border-top:1px solid #ccc;
+border-bottom:1px solid #ccc;
+}
+
+/* 搜索框的制作 */
+.search{
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+  height: 26px;
+  border: 1px solid #ccc;
+  flex: 1;
+  margin:8px 10px;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+.search img{
+  width: 16px;
+  height: 16px;
+  margin:0 5px 0 5px; 
+
+}
+.search p{
+ color:#666
+}
+/* 小头像的制作 */
+.user{
+  width: 44px;
+  height: 44px; 
+  font-size: 12px;
+  text-align: center;
+  color:#2eaae0;
+}
+/*伪元素精灵图 */
+.user::before{
+  content: '';
+  display: block;
+  width: 23px;
+  height: 23px;
+  background:url('./img/un_ico_home_v620.png') no-repeat -59px -194px;
+  margin: 5px auto -4px;
+}
+
+/* 焦点图的制作 */
+.focus{
+  padding-top: 44px;
+}
+.focus img{
+  width:100%;
+  height: 100%;
+}
+/* nav*/
+.localNav{
+  display: flex;
+  height: 64px;
+  background: #fff;
+  border-radius: 8px;
+  margin: 5px 4px;
+}
+.localNav li{
+  flex: 1;
+}
+.localNav a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+  
+}
+.localNav img{
+  width: 40px;
+  height: 40px;
+}
+.localNav span{
+  font-size: 12px;
+  
+}
+/* 主导航栏*/
+nav{
+  border-radius: 8px;
+  margin: 0 4px 3px;
+  overflow: hidden;
+}
+.nevCommon {
+  display: flex;
+  height: 88px;
+  
+  flex-direction: row;
+}
+.nevCommon:nth-child(2){
+  margin: 3px 0;
+
+}
+
+.nav-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:1
+}
+
+.nav-items a{
+  width: 177px;
+  flex:1;
+  line-height: 44px;
+  text-align: center;
+  font-size: 14px;
+  color:#fff;
+  text-shadow: 1px 1px rgba(0,0,0,.2);
+  
+}
+/* -n+2就是选择前面两行 */
+.nav-items:nth-child(-n+2){
+  border:1px solid #fff
+}
+.nav-items a:nth-child(1){
+  border-bottom: 1px solid #fff;;
+}
+.nav-items:nth-child(1) a{
+  border: 0;
+  background:url('./img/头像\ \(女-\).png') no-repeat bottom center;
+}
+.nevCommon:nth-child(1){
+  background:-webkit-linear-gradient(left,#Fa5A55,#FA994D);
+}
+.nevCommon:nth-child(2){
+  background:-webkit-linear-gradient(left,#4890ED,#53bcEd);
+}
+.nevCommon:nth-child(3){
+  background:-webkit-linear-gradient(left,#34c2A9,#6cD599);
+}
+/*  */
+.subnavCnt{
+display: flex;
+border-radius: 8px;
+background:#ffff;
+flex-wrap: wrap;
+margin: 0 5px;
+padding: 5px 0;
+ box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+.subnavCnt li{
+  flex: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.subnavCnt img{
+  width: 40px;
+  height: 40px;
+}
+.subnavCnt span{
+  font-size: 12px;
+  
+}
+
+/*热门话题 */
+
+/* 销售模块 */
+.selaeBox{
+  margin: 4px ;
+  background:#ffff;
+  border-top:10px solid #bbbb;
+  margin-bottom: 10px;
+}
+.saleshd{
+  margin-top:10px;
+  background:#ffff;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+}
+.saleshd h2{
+color:#FA994D;
+font-weight: bolder;
+margin-left: 10px;
+}
+.saleshd a{
+padding: 3px 20px  3px 10px ;
+margin-right:10px ;
+border-radius: 8px;
+font-size:12px;
+color:#fff;
+font-weight: bolder;
+ background:-webkit-linear-gradient(left,#FF506c,#FF6bc6);
+}
+.saleshd a img{
+ width: 10px;
+ height: 10px;
+ margin-left: 5px;
+}
+.row{
+  display: flex;
+
+}
+.row a{
+  flex: 1;
+border-bottom: 1px solid #CCC;
+}
+.row a:nth-child(1){
+  border-right: 1px solid #EEE;
+}
+.row a img{
+  width: 100%;
+}
+/* 底部制作 */
+.footerCnt{
+  margin-top: 5px;
+display: flex;
+border-top:1px solid #CCCC;
+border-bottom: 2px solid #ccc;
+background: #ffff;
+}
+
+.footerCnt .footerItem{
+  flex: 1;
+  padding: 10px 0;
+  
+}
+.footerCnt .footerItem a{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  
+}
+/* 最底部 */
+.textCnt{
+  padding: 8px;
+  width: 300px;
+  display: flex;
+  margin: 0 auto;
+}
+.textCnt span{
+  flex: 1;
+
+   border-right: 2px solid #ccc;
+   line-height: 20px;
+   text-align: center;
+}
+.textCnt span:nth-child(3){
+  border:none
+}
+
+.textTwo{
+  display: flex;
+  width: 256px;
+   margin: 0 auto;
+   margin-left: 127px;
+}
+
+.textTwo p{
+  flex: 1;
+  line-height: 20px;
+  text-align: center;
+  
+  
+}
+.textTwo p:nth-child(1){
+  border-right: 2px solid #ccc;
+}
