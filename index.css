@@ -25,7 +25,6 @@ div{
 
 */
 .serchCnt{
-
 display: flex;
 width: 100%;
 position: fixed;
@@ -76,7 +75,7 @@ justify-content: flex-start;
   display: block;
   width: 23px;
   height: 23px;
-  background:url('./img/un_ico_home_v620.png') no-repeat -59px -194px;
+  background:url('./img/un_ico_home_v620.png') no-repeat -153px -250px;
   margin: 5px auto -4px;
 }
 
@@ -157,7 +156,7 @@ nav{
 }
 .nav-items:nth-child(1) a{
   border: 0;
-  background:url('./img/头像\ \(女-\).png') no-repeat bottom center;
+  background:url('./img/un_ico_home_v620.png')56px -236px no-repeat ;
 }
 .nevCommon:nth-child(1){
   background:-webkit-linear-gradient(left,#Fa5A55,#FA994D);
